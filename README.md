@@ -9,7 +9,16 @@
 
 ## Première utilisation ##
 
+- Cloner le projet
+- Se placer dans le dossier du projet
+- Se placer dans le dossier 'backend' puis éxécuter la commande : `npm install`
+- Dans un autre terminal, se placer dans le dossier 'frontend' puis éxécuter la commande : `npm install && ng build`
+  
 ## Utilisation ##
+
+- Se placer dans le dossier du projet
+- Se placer dans le dossier 'backend' puis éxécuter la commande : `npm start`
+- Dans un autre terminal, se placer dans le dossier 'frontend' puis éxécuter la commande : `ng serve`
 
 ## Auteur ##
 * **Xavier Lauer** - [Xantoom](https://github.com/Xantoom)
