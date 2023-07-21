@@ -2,7 +2,7 @@
 
 > HotTakes est un projet de formation de la formation Développeur Web d'OpenClassrooms. Il s'agit d'un site de recette de sauces piquantes.
 
-Étape du projet : Soutenance à planifier
+Étape du projet : Projet fini (à voir avec mentor) - Soutenance à planifier
 
 ## Prérequis ##
 - [NPM](https://www.npmjs.com/)
