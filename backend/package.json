@@ -1,12 +1,22 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "",
+  "description": "Projet 6 - Formation Développeur Web - OpenClassrooms",
   "main": "server.js",
-  "author": "",
+  "author": "Xavier Lauer",
   "license": "ISC",
   "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.3.1",
     "express": "^4.18.2",
+    "mongodb": "^5.7.0",
     "mongoose": "^7.4.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Xantoom/HotTakes.git"
+  },
+  "scripts": {
+    "start": "node server"
   }
 }
