@@ -7,7 +7,7 @@
 - [Express]()
 - [Mangoose]()
 
-## Première utilisation ##
+## Installation ##
 
 - Cloner le projet
 - Se placer dans le dossier du projet
