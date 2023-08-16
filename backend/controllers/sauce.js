@@ -80,10 +80,10 @@ exports.updateSauce = (req, res) => {
             } else {
                 const filename = sauce.imageUrl.split("/images/")[1];
                 const sauceObject = req.file ? {
-                        ...fs.unlink(`images/${filename}`, () => {}),
-                        ...JSON.parse(req.body.sauce),
-                        imageUrl: `${req.protocol}://${req.get("host")}/images/${req.file.filename}`,
-                    } : { ...req.body };
+                    ...fs.unlink(`images/${filename}`, () => {}),
+                    ...JSON.parse(req.body.sauce),
+                    imageUrl: `${req.protocol}://${req.get("host")}/images/${req.file.filename}`,
+                } : { ...req.body };
                 Sauce.updateOne({ _id: req.params.id }, { ...sauceObject, _id: req.params.id })
                     .then(() => res.status(200).json({ message: "La sauce a bien été modifiée" }))
                     .catch((error) => res.status(400).json(`Erreur : ${error}`));
@@ -115,10 +115,12 @@ exports.likeSauce = (req, res) => {
         case 0:
             Sauce.findOne({ _id: req.params.id })
                 .then((sauce) => {
+                    // Dans le cas d'une annulation d'un like
                     if (sauce.usersLiked.includes(req.body.userId)) {
                         Sauce.updateOne({ _id: req.params.id }, { $pull: { usersLiked: req.body.userId }, $inc: { likes: -1 } })
                             .then(() => res.status(200).json({ message: "Votre J'aime a bien été retiré !" }))
                             .catch((error) => res.status(400).json(`Erreur : ${error}`));
+                    // Dans le cas d'une annulation d'un dislike
                     } else if (sauce.usersDisliked.includes(req.body.userId)) {
                         Sauce.updateOne(
                             { _id: req.params.id },

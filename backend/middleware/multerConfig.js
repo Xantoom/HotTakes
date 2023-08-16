@@ -1,5 +1,10 @@
 // Imports
 const multer = require("multer");
+const fs = require("fs");
+
+// Si le dossier images n'existe pas, on le crée
+const dir = "./images";
+if (!fs.existsSync(dir)) fs.mkdirSync(dir);
 
 // MimeTypes
 const MimeTypes = {

@@ -4,7 +4,7 @@ const sauceCtrl = require("../controllers/sauce");
 const auth = require("../middleware/auth");
 const multer = require("../middleware/multerConfig");
 
-// Définitions de toutes les routes
+// Définitions de toutes les routes pour les sauces
 router.get("/", auth, sauceCtrl.getAllSauces);
 router.post("/", auth, multer, sauceCtrl.createSauce);
 router.get("/:id", auth, sauceCtrl.getOneSauce);
